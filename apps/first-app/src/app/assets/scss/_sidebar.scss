@@ -1,0 +1,209 @@
+.navbar{
+    background: transparent;
+
+    i{
+        cursor: pointer;
+        color: #333;
+    }
+    .navbar-page{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .navbar-nav{
+        .nav-link{
+            color: #333;
+            font-size: 14px;
+
+            &:hover{
+                opacity: .8;
+                transition: .8s;
+            }
+        }
+    }
+
+    .dropdown{
+
+        .dropdown-menu{
+            left: auto;
+            right: 0;
+            border-radius: 0;
+            border-color: #ccc;
+            padding: 0;
+
+            a{
+                padding: .5rem 2rem;
+
+                &:active{
+                    background: transparent;
+                }
+
+                &:hover{
+                    color: $blue;
+                }
+            }
+        }
+
+        button {
+            background: transparent;
+            border: 0;
+            color: #959595;
+            
+            &:focus, &:active, &:visited{
+                box-shadow: none !important;
+                background: transparent !important;
+                color: #959595 !important;
+                border: 0;
+            }
+
+            &:hover{
+                color: $cyan;
+                background: transparent;
+                border: 0;
+            }
+
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .dropdown-toggle-split::after{
+        margin-left: 10px;
+    }
+
+    .dropdown-notification.dropdown{
+        color: #ccc;
+
+        // .dropdown-menu{
+
+        //     a{
+        //         padding: 1rem 8rem;
+        //     }
+        // }
+
+        .dropdown-toggle-split::after{
+            display: none;
+        }
+    }
+}
+  
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    // background: #333;
+
+    .sidebar-heading {
+        padding: 2.2rem 0 1.4rem;
+        max-height: 80px;
+        
+        a{
+
+            &:hover{
+                text-decoration: none;
+                opacity: .8;
+            }
+        }
+    }
+
+    .list-group {
+        width: 15rem;
+        border: 0;
+        background: transparent;
+        
+        .material-icons.md-dark{color: inherit !important;}
+        
+        .list-group-item{
+            transition: 1s;
+            background: transparent;
+            color: #fff;
+            font-size: 15px;
+            border: 0;
+
+            i{
+                margin-right: 20px;
+            }
+            &:hover{
+                color: rgba(255,255,255,.8);
+            }
+        }
+
+        .list-group-subitem{
+            padding-left: 65px;
+
+            strong{
+                padding: 5px;
+                border-radius: .25rem;
+                font-size: 10px;
+            }
+        }        
+    }
+
+    .accordion{
+        .card{
+            border-radius: 0;
+            background: transparent;
+            
+            .card-header{
+                background: transparent;
+            }
+            
+            .collapse {
+                .card-body{
+                    background: transparent;
+                    a{
+                        font-size: 14px;
+                        color: #fff;
+
+                        &:hover{
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .collapsing{
+                .card-body{
+                    background: transparent;
+                    a{
+                        font-size: 14px;
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+    }
+
+}
+  
+#page-content-wrapper {
+    min-width: 100vw;
+}
+  
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+  
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+        max-width: 250px;
+    }
+  
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+  
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+
+}
